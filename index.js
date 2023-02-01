@@ -52,12 +52,6 @@ shopButton.forEach((e) =>
 
 let condition = 0;
 
-document.getElementById("btn-13").addEventListener("click", (e) => {
-  okSfx();
-  bonfireButton.className = "bonfire-hidden";
-  hiddenCatalogue.className = "catalogue";
-});
-
 for (let idNumber = 1; idNumber < 13; idNumber++) {
   setTimeout(() => {
     document
@@ -130,6 +124,11 @@ function bonfireHover() {
       const stylesheet = document.createElement("style");
       stylesheet.innerText = styleBonfire;
       document.head.appendChild(stylesheet);
+      document.getElementById("btn-13").addEventListener("click", (e) => {
+        okSfx();
+        bonfireButton.className = "bonfire-hidden";
+        hiddenCatalogue.className = "catalogue";
+      });
     });
-  }, 3000);
+  }, 1000);
 }

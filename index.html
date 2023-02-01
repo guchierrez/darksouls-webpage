@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>HE'S BACK</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lato&family=Mochiy+Pop+One&family=Open+Sans&family=Raleway:wght@200&display=swap");
     </style>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./products/Mask_of_the_Father.png"
+    />
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="index.js" defer></script>
   </head>
 
   <body>
-    <script src="index.js" defer></script>
+    <div class="landing">
+      <button onclick="showVideo(); bonfireBehaviour(); bonfireHover()">ALLOW AUDIO AND VIDEO</button>
+    </div>
     <audio
+      id="firelink"
       src="./soundtrack/[YT2mp3.info] - Firelink Shrine - Dark Souls Soundtrack (320kbps).mp3"
-      autoplay="autoplay"
-      loop="loop"
     ></audio>
     <div class="main">
       <div class="audio">
@@ -26,134 +33,152 @@
         ></audio>
         <audio class="selectSfx" src="./sfx/CURSOL_SELECT.wav"></audio>
         <audio class="okSfx" src="./sfx/CURSOL_OK.wav"></audio>
+        <audio loop id="legendneverdies" src="./sfx/THE-LEGEND-NEVER-DIES.mp3"></audio>
       </div>
 
       <div class="video">
-        <video autoplay loop muted plays-inline class="back-video">
-          <source src="./background/darksouls1.mp4" type="video/mp4" />
+        <video id="bg-video" autoplay loop plays-inline class="back-video-hidden">
+          <source src="./background/Dark Souls.mp4" type="video/mp4" />
         </video>
       </div>
 
-      <nav>
+      <nav class="nav">
         <div class="header-logo">
           <img
             src="./icons/PinClipart.com_bonfire-clip-art_5681382.png"
             class="logo"
           />
-          <p>THE BONFIRE SHOP</p>
-          <div class="musicButton">
+          <p>THE UNDEAD SHOP</p>
+          <button
+            onclick="togglePlay(); toggleStyle();"
+            id="music-btn"
+            class="musicButton"
+          >
             <img src="./icons/music_icon.png" />
-          </div>
+          </button>
         </div>
 
         <ul>
           <li>WEAPONS</li>
           <li>SPELLS</li>
           <li>COVENANTS</li>
-          <li>CONTACT</li>
+          <a href="https://www.linkedin.com/in/guchierrez/"><li>CONTACT</li></a>
         </ul>
       </nav>
 
-      <div class="bonfire">SIT BY BONFIRE</div>
+      <button id="btn-13" class="bonfire">SIT BY BONFIRE</button>
 
       <div class="catalogue-hidden">
-        <div class="product estusFlask">
+        <div id="product-1" class="product estusFlask">
           <img src="./products/Item_Estus_Flask.png" />
           <span>Estus Flask</span>
-          <div class="button">
-            <p>1000</p>
+          <button id="btn-1" class="button">
+            1000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product maskFather">
+
+        <div id="product-2" class="product">
           <img src="./products/Mask_of_the_Father.png" />
           <span>Mask of the Father</span>
-          <div class="button">
-            <p>8000</p>
+          <button id="btn-2" class="button">
+            8000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product giantArmor">
+
+        <div id="product-3" class="product">
           <img src="./products/Giant_Armor.png" />
           <span>Giant Armor</span>
-          <div class="button">
-            <p>5000</p>
+          <button id="btn-3" class="button">
+            5000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product giantGauntles">
+
+        <div id="product-4" class="product">
           <img src="./products/Giant_Gauntlets.png" />
           <span>Giant Gauntlets</span>
-          <div class="button">
-            <p>5000</p>
+          <button id="btn-4" class="button">
+            5000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product giantLeggings">
+
+        <div id="product-5" class="product">
           <img src="./products/Giant_Leggings.png" />
           <span>Giant Leggings</span>
-          <div class="button">
-            <p>5000</p>
+          <button id="btn-5" class="button">
+            5000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product zweihander">
+
+        <div id="product-6" class="product">
           <img src="./products/Wpn_Zweihander.png" />
           <span>Zweihander</span>
-          <div class="button">
-            <p>3500</p>
+          <button id="btn-6" class="button">
+            3500
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product grassShield">
+
+        <div id="product-7" class="product">
           <img src="./products/Grass_crest_shield.png" />
           <span>Grass Crest Shield</span>
-          <div class="button">
-            <p>1500</p>
+          <button id="btn-7" class="button">
+            1500
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product havelRing">
+
+        <div id="product-8" class="product">
           <img src="./products/Havel's_Ring.png" />
           <span>Havel's Ring</span>
-          <div class="button">
-            <p>2000</p>
+          <button id="btn-8" class="button">
+            2000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product ringFap">
+
+        <div id="product-9" class="product">
           <img src="./products/Ring_of_Favor_and_Protection.png" />
           <span class="fap">Ring of Favor and Protection</span>
-          <div class="button">
-            <p>2000</p>
+          <button id="btn-9" class="button">
+            2000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product pyroFlame">
+
+        <div id="product-10" class="product">
           <img src="./products/Pyro_Pyromancy_Flame.png" />
           <span>Pyromancy Flame</span>
-          <div class="button">
-            <p>1000</p>
+          <button id="btn-10" class="button">
+            1000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product blackFlame">
+
+        <div id="product-11" class="product">
           <img src="./products/Black_Flame.png" />
           <span>Black Flame</span>
-          <div class="button">
-            <p>5000</p>
+          <button id="btn-11" class="button">
+            5000
             <img src="./icons/soul_of_a_proud_paladin.png" />
-          </div>
+          </button>
         </div>
-        <div class="product emote">
+
+        <div onclick="stopBgm(); changeVideo(); hideHud()" id="product-12" class="product-hidden">
           <img src="./products/7011.png" />
           <span>Well, what is it?</span>
-          <div class="button">
-            <p>9000</p>
-            <img src="./icons/soul_of_a_proud_paladin.png" />
+          <button id="btn-12" class="button-hidden">
+            PWN SOME NOOBZ
           </div>
-        </div>
-      </div>
     </div>
+    </div>
+    <footer>
+      <a href="https://www.linkedin.com/feed/"><img src="./icons/Linkedin-In-Logo-PNG-HD.png"></a>
+      <a href="https://github.com/guchierrez/netflix-clone"><img class="gatinho" src="./icons/25231.png"></a>
+    </footer>
   </body>
 </html>

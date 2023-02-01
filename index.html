@@ -19,8 +19,9 @@
 
   <body>
     <div class="landing">
-      <button onclick="showVideo(); bonfireBehaviour(); bonfireHover()">ALLOW AUDIO AND VIDEO</button>
+      <button onclick="showVideo(); bonfireBehaviour(); bonfireHover(); playBonfireSfx()">ALLOW AUDIO AND VIDEO</button>
     </div>
+
     <audio
       id="firelink"
       src="./soundtrack/[YT2mp3.info] - Firelink Shrine - Dark Souls Soundtrack (320kbps).mp3"
@@ -28,6 +29,7 @@
     <div class="main">
       <div class="audio">
         <audio
+        id="bonfireSfx"
           class="bonfireSfx"
           src="./sfx/x2mate.com - [Dark Souls] Bonfire Sound Effect [Free Ringtone Download] (320 kbps).mp3"
         ></audio>
@@ -56,20 +58,26 @@
           >
             <img src="./icons/music_icon.png" />
           </button>
+
+          
         </div>
 
-        <ul>
+        <ul class="links">
           <li>WEAPONS</li>
           <li>SPELLS</li>
           <li>COVENANTS</li>
           <a href="https://www.linkedin.com/in/guchierrez/"><li>CONTACT</li></a>
         </ul>
+
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
       </nav>
 
       <button id="btn-13" class="bonfire">SIT BY BONFIRE</button>
 
       <div class="catalogue-hidden">
-        <div id="product-1" class="product estusFlask">
+        <div id="product-1" class="product">
           <img src="./products/Item_Estus_Flask.png" />
           <span>Estus Flask</span>
           <button id="btn-1" class="button">
@@ -175,10 +183,11 @@
             PWN SOME NOOBZ
           </div>
     </div>
-    </div>
     <footer>
       <a href="https://www.linkedin.com/feed/"><img src="./icons/Linkedin-In-Logo-PNG-HD.png"></a>
       <a href="https://github.com/guchierrez/netflix-clone"><img class="gatinho" src="./icons/25231.png"></a>
     </footer>
+    </div>
+
   </body>
 </html>

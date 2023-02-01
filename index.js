@@ -56,7 +56,7 @@ for (let idNumber = 1; idNumber < 13; idNumber++) {
   setTimeout(() => {
     document
       .getElementById(`btn-${idNumber}`)
-      .addEventListener("mouseenter", selectSfx, true);
+      .addEventListener("mouseenter", selectSfx);
 
     document
       .getElementById(`btn-${idNumber}`)
@@ -72,7 +72,7 @@ for (let idNumber = 1; idNumber < 13; idNumber++) {
 
         document
           .getElementById(`btn-${idNumber}`)
-          .removeEventListener("mouseenter", selectSfx, true);
+          .removeEventListener("mouseenter", selectSfx);
 
         if (condition >= 11) {
           document.querySelector(".product-hidden").className = "product";
@@ -113,6 +113,11 @@ function bonfireBehaviour() {
   }, 3000);
 }
 
+function playBonfireSfx() {
+  var bonfireSfx = document.getElementById("bonfireSfx");
+  bonfireSfx.play();
+}
+
 const styleBonfire = `.bonfire:hover {
   background-color: rgba(87, 37, 13, 0.8);
   cursor: pointer;
@@ -132,3 +137,9 @@ function bonfireHover() {
     });
   }, 1000);
 }
+
+const menu_btn = document.querySelector(".hamburger");
+
+menu_btn.addEventListener("click", (e) => {
+  menu_btn.classList.toggle("is-active");
+});

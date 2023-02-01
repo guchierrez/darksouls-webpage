@@ -63,15 +63,19 @@ for (let idNumber = 1; idNumber < 13; idNumber++) {
     document
       .getElementById(`btn-${idNumber}`)
       .addEventListener("mouseenter", selectSfx, true);
+
     document
       .getElementById(`btn-${idNumber}`)
       .addEventListener("click", (e) => {
         condition++;
         console.log(condition);
         okSfx();
+
         document.getElementById(`product-${idNumber}`).className =
           "product-fake";
+
         document.getElementById(`btn-${idNumber}`).disabled = true;
+
         document
           .getElementById(`btn-${idNumber}`)
           .removeEventListener("mouseenter", selectSfx, true);

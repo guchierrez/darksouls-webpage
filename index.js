@@ -115,6 +115,7 @@ function bonfireBehaviour() {
 
 function playBonfireSfx() {
   var bonfireSfx = document.getElementById("bonfireSfx");
+  bonfireSfx.volume = 0.3;
   bonfireSfx.play();
 }
 

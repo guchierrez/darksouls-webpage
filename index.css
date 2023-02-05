@@ -267,7 +267,7 @@ nav ul li:hover {
   position: fixed;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vh;
   min-height: 100%;
   z-index: 1;
   object-fit: cover;
